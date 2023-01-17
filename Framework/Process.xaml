@@ -8,10 +8,10 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>540,1310.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>797.6,1150.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="58">
+    <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -43,10 +43,11 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -79,20 +80,45 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="536,1245.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="443.2,1085.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="492.8,1156" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="400,996" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Shape" />
         <Variable x:TypeArguments="s:String[]" Name="Website" />
         <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
         <Variable x:TypeArguments="scg:List(x:Int32)" Name="countValue" />
+        <Variable x:TypeArguments="x:Int32" Name="Size" />
+        <Variable x:TypeArguments="x:String" Name="Shapes" />
+        <Variable x:TypeArguments="x:String" Name="Paper" />
+        <Variable x:TypeArguments="x:String" Name="Lamination" />
+        <Variable x:TypeArguments="x:String" Name="websites" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue250" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue500" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue1000" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue2000" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue3000" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue5000" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue10000" />
+        <Variable x:TypeArguments="x:String" Name="out_GetValue25000" />
+        <Variable x:TypeArguments="x:String" Name="Ink" />
+        <Variable x:TypeArguments="x:String" Name="FirstNum" />
+        <Variable x:TypeArguments="x:String" Name="SecondNum" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -100,8 +126,8 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="430.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,506.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -109,15 +135,15 @@
                 <OutArgument x:TypeArguments="x:Int32">[Size]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:Int32">[System.Text.RegularExpressions.Regex.Matches(in_TransactionItem.SpecificContent("Shape").ToString,"(.\d+.\d+)|(\d+.\d+)|(\d+)").Count]</InArgument>
+                <InArgument x:TypeArguments="x:Int32">[System.Text.RegularExpressions.Regex.Matches(in_TransactionItem.Item(0).ToString,"(.\d+.\d+)|(\d+.\d+)|(\d+)").Count]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[Shape]</OutArgument>
+                <OutArgument x:TypeArguments="x:String">[Shapes]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(in_TransactionItem.SpecificContent("Shape").ToString,"\w(?&lt;!\d)(?&lt;!X)(?&lt;!x)[\w'-]*").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(in_TransactionItem.Item(0).ToString,"\w(?&lt;!\d)(?&lt;!X)(?&lt;!x)[\w'-]*").ToString]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -125,7 +151,7 @@
                 <OutArgument x:TypeArguments="x:String">[Paper]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Paper").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_TransactionItem.Item(1).ToString]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -133,15 +159,15 @@
                 <OutArgument x:TypeArguments="x:String">[Lamination]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Coating").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_TransactionItem.Item(3).ToString]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[website]</OutArgument>
+                <OutArgument x:TypeArguments="x:String">[websites]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Website").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_TransactionItem.Item(12).ToString]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -213,35 +239,129 @@
                 <OutArgument x:TypeArguments="x:String">[Ink]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Ink").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_TransactionItem.Item(2).ToString]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item_Inputdata_Websites" sap:VirtualizedContainerService.HintSize="430.4,223.2" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="CP_Data" Reference="[in_TransactionItem.Item(12).ToString]">
-        <ui:AddQueueItem.ItemInformation>
-          <InArgument x:TypeArguments="x:String" x:Key="Shape">[in_TransactionItem.Item(0).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="Paper">[in_TransactionItem.Item(1).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="Ink">[in_TransactionItem.Item(2).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="Coating">[in_TransactionItem.Item(3).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="250">[in_dt_TransactionData.Columns(4).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="500">[in_dt_TransactionData.Columns(5).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="1000">[in_dt_TransactionData.Columns(6).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="2000">[in_dt_TransactionData.Columns(7).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="3000">[in_dt_TransactionData.Columns(8).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="5000">[in_dt_TransactionData.Columns(9).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="10000">[in_dt_TransactionData.Columns(10).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="25000">[in_dt_TransactionData.Columns(11).ToString]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="Website">[in_TransactionItem.Item(12).ToString]</InArgument>
-        </ui:AddQueueItem.ItemInformation>
-      </ui:AddQueueItem>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,312.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item_Inputdata_Websites" sap:VirtualizedContainerService.HintSize="356.8,52.8" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="CP_Data" Reference="[in_TransactionItem.Item(12).ToString]">
+              <ui:AddQueueItem.ItemInformation>
+                <InArgument x:TypeArguments="x:String" x:Key="Shape">[in_TransactionItem.Item(0).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Paper">[in_TransactionItem.Item(1).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Ink">[in_TransactionItem.Item(2).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Coating">[in_TransactionItem.Item(3).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="250">[in_dt_TransactionData.Columns(4).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="500">[in_dt_TransactionData.Columns(5).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="1000">[in_dt_TransactionData.Columns(6).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="2000">[in_dt_TransactionData.Columns(7).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="3000">[in_dt_TransactionData.Columns(8).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="5000">[in_dt_TransactionData.Columns(9).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="10000">[in_dt_TransactionData.Columns(10).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="25000">[in_dt_TransactionData.Columns(11).ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Website">[in_TransactionItem.Item(12).ToString]</InArgument>
+              </ui:AddQueueItem.ItemInformation>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AddQueueItem>
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <If Condition="[Size&gt;1]" DisplayName="If_Size" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="476.8,292.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[FirstNum]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(in_TransactionItem.Item(0).ToString,"(.\d+.\d+)|(\d+.\d+)|(\d+)")(0).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[SecondNum]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(in_TransactionItem.Item(0).ToString,"(.\d+\d+)|(.\d+\d+)|(.\d+.\d+)|(\d+.\d+)|(\d+)")(1).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="476.8,292.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[FirstNum]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(in_TransactionItem.Item(0).ToString,"(\d.\d)|(\d+)")(0).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[SecondNum]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(in_TransactionItem.Item(0).ToString,"(\d.\d)|(\d+)")(0).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[Shapes]" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[FirstNum]" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LighteningLables.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="LighteningLables.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_getShapes">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Shapes" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_firstNumber">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirstNum" />
+          </InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
     </Sequence>
   </Sequence>
 </Activity>
